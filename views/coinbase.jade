@@ -41,8 +41,8 @@ block content
     function getText(block, chain) {
       var s = $('#block'+block+'chain'+chain+'number').val() +
               $('#block'+block+'chain'+chain+'nonce').val() +
-              coinbasevalue ? ($('#block'+block+'chain'+chain+'coinbasevalue').val() +
-              $('#block'+block+'chain'+chain+'coinbaseto').val()) : "";
+              $('#block'+block+'chain'+chain+'coinbasevalue').val() +
+              $('#block'+block+'chain'+chain+'coinbaseto').val();
 
       for (var x=0; $('#block'+block+'chain'+chain+'tx'+x+'value').length > 0; x++) {
         s = s + $('#block'+block+'chain'+chain+'tx'+x+'value').val() +
